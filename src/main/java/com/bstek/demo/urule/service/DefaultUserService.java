@@ -3,13 +3,15 @@ package com.bstek.demo.urule.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.bstek.urule.console.database.model.Group;
 import com.bstek.urule.console.database.model.User;
 import com.bstek.urule.console.database.service.user.UserService;
 import com.bstek.urule.exception.RuleException;
 
-//@Service("urule.userService")
-public class UserServiceImpl implements UserService {
+//@Service(UserService.BEAN_ID)
+public class DefaultUserService implements UserService {
 
 	@Override
 	public User get(String account) {
