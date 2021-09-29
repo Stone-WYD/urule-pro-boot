@@ -31,7 +31,6 @@ public class DefaultSecurityProvider implements SecurityProvider {
 	@Override
 	public void logout(HttpServletRequest req) {
 		req.getSession().removeAttribute("urule.user");
-
 	}
 
 }

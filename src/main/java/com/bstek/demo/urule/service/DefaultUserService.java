@@ -26,7 +26,7 @@ public class DefaultUserService implements UserService {
 
 	@Override
 	public User validate(String account, String password) {
-		if ("123456".equals(password)) {
+		if ("12345678".equals(password)) {
 			User user = get(account);
 			List<Group> userGroups = new ArrayList<Group>();
 			Group group = new Group();
