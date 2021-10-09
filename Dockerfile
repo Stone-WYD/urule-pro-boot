@@ -2,7 +2,7 @@ from williamyeh/java8
 
 MAINTAINER bstek
 
-add  target/urule-pro-boot-0.0.1.jar /urule/urule-pro-boot.jar
+add  target/urule-pro-boot-0.0.2.jar /urule/urule-pro-boot.jar
 add  home/ /urule/
 
 ENV LANG C.UTF-8

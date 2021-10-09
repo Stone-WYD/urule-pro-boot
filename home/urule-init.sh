@@ -15,7 +15,7 @@ LIBFILE=""
 if [ ! $URULE_PROFILE ] 
 then
 	resetInitProp
-	java -Xbootclasspath/a:/urule/classes -jar $JARFILE
+	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE --spring.profiles.active=hsql
 elif [ $URULE_PROFILE = 'dm' ] 
 then
 	resetInitProp
@@ -25,6 +25,8 @@ then
 		LIBFILE=":/urule/lib/dm/7/DmJdbcDriver17.jar"
 	elif [ $DRIVER_VERSION = 8 ] 
 	then
+		LIBFILE=":/urule/lib/dm/8/dm-connector-java-8.1.1.126.jar"
+	else
 		LIBFILE=":/urule/lib/dm/8/dm-connector-java-8.1.1.126.jar"
 	fi
 	CLASSPATH=${CLASSPATH}${LIBFILE}
@@ -39,6 +41,8 @@ then
 		LIBFILE=":/urule/lib/mysql/5/mysql-connector-java-5.1.49.jar"
 	elif [ $DRIVER_VERSION = 8 ] 
 	then
+		LIBFILE=":/urule/lib/mysql/8/mysql-connector-java-8.0.26.jar"
+	else
 		LIBFILE=":/urule/lib/mysql/8/mysql-connector-java-8.0.26.jar"
 	fi
 	CLASSPATH=${CLASSPATH}${LIBFILE}
@@ -60,6 +64,8 @@ then
 	elif [ $DRIVER_VERSION = 9 ] 
 	then
 		LIBFILE=":/urule/lib/sqlserver/9/mssql-jdbc-9.4.0.jre8.jar"
+	else 
+		LIBFILE=":/urule/lib/sqlserver/9/mssql-jdbc-9.4.0.jre8.jar"
 	fi
 	CLASSPATH=${CLASSPATH}${LIBFILE}
 	echo "CLASSPATH=${CLASSPATH}"
@@ -80,6 +86,8 @@ then
 	elif [ $DRIVER_VERSION = 21 ] 
 	then
 		LIBFILE=":/urule/lib/oracle/21/ojdbc8-21.3.0.0.jar"
+	else 
+		LIBFILE=":/urule/lib/oracle/21/ojdbc8-21.3.0.0.jar"
 	fi
 	CLASSPATH=${CLASSPATH}${LIBFILE}
 	echo "CLASSPATH=${CLASSPATH}"
@@ -93,7 +101,7 @@ then
 	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE
 elif [ $URULE_PROFILE = 'hsql' ] 
 then
-	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE --spring.profiles.active=$URULE_PROFILE
+	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE --spring.profiles.active=hsql
 else 
 	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE --spring.profiles.active=hsql
 fi
