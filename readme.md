@@ -7,6 +7,7 @@ docker commit -a "bstek" -m "urule-console-pro4" -p 93950e47f7d1 bsteker/urule-c
 ## 提交命令
 ```
 docker push bsteker/urule-console-pro4
+docker push bsteker/urule-console-pro4:v1.0.2
 ```
 
 ## 采用hsql驱动的镜像参数设置

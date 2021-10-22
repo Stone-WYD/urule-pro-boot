@@ -43,7 +43,7 @@
 		<dependency>
 			<groupId>com.bstek.urule</groupId>
 			<artifactId>urule-console-pro</artifactId>
-			<version>LATEST</version>
+			<version>4.0.5</version>
 		</dependency>
 	</dependencies>
 	<build>
