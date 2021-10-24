@@ -1,25 +1,18 @@
 echo "URULE_PROFILE=$URULE_PROFILE"
 echo "DRIVER_VERSION=$DRIVER_VERSION"
 
-resetInitProp(){
-	echo "reset urule-init.properties"
-	rm /urule/urule.properties
-	rm /urule/classes/urule-init.properties
-	cp /urule/classes/urule-init-db.properties /urule/classes/urule-init.properties
-}
-
-CLASSPATH="/urule/classes"
+CLASSPATH="/urule_home/classes"
 JARFILE="/urule/urule-pro-boot.jar"
 LIBFILE=""
+HOME="/urule_home"
+
+echo "HOME=$HOME"
 
 if [ ! $URULE_PROFILE ] 
 then
-	resetInitProp
-	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE --spring.profiles.active=hsql
+	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE --spring.profiles.active=embed
 elif [ $URULE_PROFILE = 'dm' ] 
 then
-	resetInitProp
-
 	if [ $DRIVER_VERSION = 7 ] 
 	then
 		LIBFILE=":/urule/lib/dm/7/DmJdbcDriver17.jar"
@@ -31,11 +24,9 @@ then
 	fi
 	CLASSPATH=${CLASSPATH}${LIBFILE}
 	echo "CLASSPATH=${CLASSPATH}"
-	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE 
+	java -Xbootclasspath/a:$CLASSPATH -DuruleHome=$HOME -jar $JARFILE 
 elif [ $URULE_PROFILE = 'mysql' ] 
 then
-	resetInitProp
-
 	if [ $DRIVER_VERSION = 5 ] 
 	then
 		LIBFILE=":/urule/lib/mysql/5/mysql-connector-java-5.1.49.jar"
@@ -47,11 +38,9 @@ then
 	fi
 	CLASSPATH=${CLASSPATH}${LIBFILE}
 	echo "CLASSPATH=${CLASSPATH}"
-	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE
+	java -Xbootclasspath/a:$CLASSPATH -DuruleHome=$HOME -jar $JARFILE
 elif [ $URULE_PROFILE = 'sqlserver' ] 
 then
-	resetInitProp
-
 	if [ $DRIVER_VERSION = 6 ] 
 	then
 		LIBFILE=":/urule/lib/sqlserver/6/mssql-jdbc-6.4.0.jre8.jar"
@@ -69,11 +58,9 @@ then
 	fi
 	CLASSPATH=${CLASSPATH}${LIBFILE}
 	echo "CLASSPATH=${CLASSPATH}"
-	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE
+	java -Xbootclasspath/a:$CLASSPATH -DuruleHome=$HOME -jar $JARFILE
 elif [ $URULE_PROFILE = 'oracle' ] 
 then
-	resetInitProp
-
 	if [ $DRIVER_VERSION = 12 ] 
 	then
 		LIBFILE=":/urule/lib/oracle/12/ojdbc8-12.2.0.1.jar"
@@ -91,17 +78,26 @@ then
 	fi
 	CLASSPATH=${CLASSPATH}${LIBFILE}
 	echo "CLASSPATH=${CLASSPATH}"
-	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE
+	java -Xbootclasspath/a:$CLASSPATH -DuruleHome=$HOME -jar $JARFILE
 elif [ $URULE_PROFILE = 'db2' ] 
 then
-	resetInitProp
 	LIBFILE=":/urule/lib/db2/db2jcc.jar"
 	CLASSPATH=${CLASSPATH}${LIBFILE}
 	echo "CLASSPATH=${CLASSPATH}"
-	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE
+	java -Xbootclasspath/a:$CLASSPATH -DuruleHome=$HOME -jar $JARFILE
+elif [ $URULE_PROFILE = 'postgresql' ] 
+then
+	resetInitProp
+	LIBFILE=":/urule/lib/postgresql/42/postgresql-42.3.0.jar"
+	CLASSPATH=${CLASSPATH}${LIBFILE}
+	echo "CLASSPATH=${CLASSPATH}"
+	java -Xbootclasspath/a:$CLASSPATH -DuruleHome=$HOME -jar $JARFILE
 elif [ $URULE_PROFILE = 'hsql' ] 
 then
-	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE --spring.profiles.active=hsql
+	java -Xbootclasspath/a:$CLASSPATH -DuruleHome=$HOME -jar $JARFILE
+elif [ $URULE_PROFILE = 'embed' ] 
+then
+	java -Xbootclasspath/a:$CLASSPATH -DuruleHome=$HOME -jar $JARFILE
 else 
-	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE --spring.profiles.active=hsql
+	java -Xbootclasspath/a:$CLASSPATH -jar $JARFILE --spring.profiles.active=embed
 fi
