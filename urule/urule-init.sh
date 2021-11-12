@@ -87,7 +87,6 @@ then
 	java -Xbootclasspath/a:$CLASSPATH -DuruleHome=$HOME -jar $JARFILE
 elif [ $URULE_PROFILE = 'postgresql' ] 
 then
-	resetInitProp
 	LIBFILE=":/urule/lib/postgresql/42/postgresql-42.3.0.jar"
 	CLASSPATH=${CLASSPATH}${LIBFILE}
 	echo "CLASSPATH=${CLASSPATH}"

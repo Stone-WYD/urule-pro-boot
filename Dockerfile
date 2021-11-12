@@ -2,7 +2,7 @@ from williamyeh/java8
 
 MAINTAINER bstek
 
-add  target/urule-pro-boot-0.0.4.jar /urule/urule-pro-boot.jar
+add  target/urule-pro-boot-0.0.5.jar /urule/urule-pro-boot.jar
 add  home/ /urule_home/
 add  urule/ /urule/
 

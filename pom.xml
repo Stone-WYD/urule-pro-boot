@@ -13,7 +13,7 @@
 	<groupId>com.bstek.demo</groupId>
 	<name>URule Console Pro4 Sample</name>
 	<description>Spring Boot URule Console Pro4</description>
-	<version>0.0.4</version>
+	<version>0.0.5</version>
 	<url>http://projects.spring.io/spring-boot/</url>
 	<organization>
 		<name>Pivotal Software, Inc.</name>
@@ -49,6 +49,12 @@
 			<groupId>com.bstek.urule</groupId>
 			<artifactId>urule-console-pro</artifactId>
 			<version>4.0.6</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 	<build>
