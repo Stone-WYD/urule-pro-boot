@@ -1,2 +1,2 @@
 docker push bsteker/urule-console-pro4
-docker push bsteker/urule-console-pro4:v1.0.5
+docker push bsteker/urule-console-pro4:v1.0.6
