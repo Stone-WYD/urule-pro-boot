@@ -48,7 +48,7 @@
 		<dependency>
 			<groupId>com.bstek.urule</groupId>
 			<artifactId>urule-console-pro</artifactId>
-			<version>4.0.8</version>
+			<version>4.0.9</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.slf4j</groupId>
