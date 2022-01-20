@@ -1,7 +1,7 @@
 echo "URULE_PROFILE=$URULE_PROFILE"
 echo "DRIVER_VERSION=$DRIVER_VERSION"
 
-CLASSPATH="/urule_home/classes"
+CLASSPATH="/urule/classes"
 JARFILE="/urule/urule-pro-boot.jar"
 LIBFILE=""
 HOME="/urule_home"
