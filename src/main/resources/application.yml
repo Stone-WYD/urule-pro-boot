@@ -1,4 +1,7 @@
 server:
  port: 8081
+spring:
+ profiles:
+  active: mysql #激活mysql配置
 logging:
  config: classpath:logback-spring.xml

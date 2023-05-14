@@ -1,0 +1,284 @@
+[2023-05-14 11:12:42.536] [main] INFO  com.bstek.demo.Application : Starting Application on DESKTOP-VO4678M with PID 2976 (D:\MyStudy\urule-pro-boot\target\classes started by Stone in D:\MyStudy\urule-pro-boot)
+[2023-05-14 11:12:42.538] [main] INFO  com.bstek.demo.Application : The following profiles are active: mysql
+[2023-05-14 11:12:43.663] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8081 (http)
+[2023-05-14 11:12:43.670] [main] INFO  o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8081"]
+[2023-05-14 11:12:43.670] [main] INFO  o.a.catalina.core.StandardService : Starting service [Tomcat]
+[2023-05-14 11:12:43.670] [main] INFO  o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37]
+[2023-05-14 11:12:43.817] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+[2023-05-14 11:12:43.817] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1234 ms
+[2023-05-14 11:12:44.000] [main] INFO  c.b.u.c.c.bootstrap.BootstrapManager : [URULE-CONSOLE]检测到Environment配置信息,开始初始化...
+[2023-05-14 11:12:44.381] [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'urule.dynamicSpringConfigLoader' defined in class path resource [urule-core-context.xml]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'urule.bootstrapManager' defined in class path resource [urule-console-context.xml]: Initialization of bean failed; nested exception is com.bstek.urule.exception.RuleException: com.bstek.urule.console.config.exception.ConfigLoadException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet successfully received from the server was 102 milliseconds ago.  The last packet sent successfully to the server was 100 milliseconds ago.)
+[2023-05-14 11:12:44.383] [main] INFO  o.a.catalina.core.StandardService : Stopping service [Tomcat]
+[2023-05-14 11:12:44.389] [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2023-05-14 11:12:44.398] [main] ERROR o.s.boot.SpringApplication : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'urule.dynamicSpringConfigLoader' defined in class path resource [urule-core-context.xml]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'urule.bootstrapManager' defined in class path resource [urule-console-context.xml]: Initialization of bean failed; nested exception is com.bstek.urule.exception.RuleException: com.bstek.urule.console.config.exception.ConfigLoadException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet successfully received from the server was 102 milliseconds ago.  The last packet sent successfully to the server was 100 milliseconds ago.)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bstek.demo.Application.main(Application.java:16)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'urule.bootstrapManager' defined in class path resource [urule-console-context.xml]: Initialization of bean failed; nested exception is com.bstek.urule.exception.RuleException: com.bstek.urule.console.config.exception.ConfigLoadException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet successfully received from the server was 102 milliseconds ago.  The last packet sent successfully to the server was 100 milliseconds ago.)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:624)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:612)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1243)
+	at com.bstek.urule.runtime.DynamicSpringConfigLoaderImpl.setApplicationContext(DynamicSpringConfigLoaderImpl.java:81)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:123)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:100)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 16 common frames omitted
+Caused by: com.bstek.urule.exception.RuleException: com.bstek.urule.console.config.exception.ConfigLoadException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet successfully received from the server was 102 milliseconds ago.  The last packet sent successfully to the server was 100 milliseconds ago.)
+	at com.bstek.urule.console.config.bootstrap.BootstrapManager.load(BootstrapManager.java:75)
+	at com.bstek.urule.console.config.bootstrap.BootstrapManager.setApplicationContext(BootstrapManager.java:124)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:123)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:100)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 32 common frames omitted
+Caused by: com.bstek.urule.console.config.exception.ConfigLoadException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet successfully received from the server was 102 milliseconds ago.  The last packet sent successfully to the server was 100 milliseconds ago.)
+	at com.bstek.urule.console.config.manager.DBConfigManager.load(DBConfigManager.java:37)
+	at com.bstek.urule.console.config.manager.JdbcConfigManager.load(JdbcConfigManager.java:35)
+	at com.bstek.urule.console.config.bootstrap.BootstrapManager.load(BootstrapManager.java:64)
+	... 38 common frames omitted
+Caused by: java.sql.SQLException: Cannot create PoolableConnectionFactory (Communications link failure
+
+The last packet successfully received from the server was 102 milliseconds ago.  The last packet sent successfully to the server was 100 milliseconds ago.)
+	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:669)
+	at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:544)
+	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:753)
+	at com.bstek.urule.console.config.manager.JdbcConfigManager.getConnection(JdbcConfigManager.java:66)
+	at com.bstek.urule.console.config.manager.DBConfigManager.e(DBConfigManager.java:106)
+	at com.bstek.urule.console.config.manager.DBConfigManager.load(DBConfigManager.java:35)
+	... 40 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 102 milliseconds ago.  The last packet sent successfully to the server was 100 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:981)
+	at com.mysql.jdbc.ExportControlled.transformSocketToSSLSocket(ExportControlled.java:164)
+	at com.mysql.jdbc.MysqlIO.negotiateSSLConnection(MysqlIO.java:4801)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1643)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1215)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2255)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2286)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2085)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:795)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:400)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:327)
+	at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:55)
+	at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:355)
+	at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:115)
+	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:665)
+	... 45 common frames omitted
+Caused by: javax.net.ssl.SSLException: Received fatal alert: protocol_version
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:208)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at com.mysql.jdbc.ExportControlled.transformSocketToSSLSocket(ExportControlled.java:149)
+	... 64 common frames omitted
+[2023-05-14 11:15:14.420] [main] INFO  com.bstek.demo.Application : Starting Application on DESKTOP-VO4678M with PID 8576 (D:\MyStudy\urule-pro-boot\target\classes started by Stone in D:\MyStudy\urule-pro-boot)
+[2023-05-14 11:15:14.422] [main] INFO  com.bstek.demo.Application : The following profiles are active: mysql
+[2023-05-14 11:15:15.141] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8081 (http)
+[2023-05-14 11:15:15.147] [main] INFO  o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8081"]
+[2023-05-14 11:15:15.148] [main] INFO  o.a.catalina.core.StandardService : Starting service [Tomcat]
+[2023-05-14 11:15:15.148] [main] INFO  o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37]
+[2023-05-14 11:15:15.247] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+[2023-05-14 11:15:15.247] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 800 ms
+[2023-05-14 11:15:15.437] [main] INFO  c.b.u.c.c.bootstrap.BootstrapManager : [URULE-CONSOLE]检测到Environment配置信息,开始初始化...
+[2023-05-14 11:15:15.634] [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'urule.dynamicSpringConfigLoader' defined in class path resource [urule-core-context.xml]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'urule.bootstrapManager' defined in class path resource [urule-console-context.xml]: Initialization of bean failed; nested exception is com.bstek.urule.exception.RuleException: com.bstek.urule.console.config.exception.ConfigLoadException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Could not create connection to database server.)
+[2023-05-14 11:15:15.637] [main] INFO  o.a.catalina.core.StandardService : Stopping service [Tomcat]
+[2023-05-14 11:15:15.643] [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2023-05-14 11:15:15.650] [main] ERROR o.s.boot.SpringApplication : Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'urule.dynamicSpringConfigLoader' defined in class path resource [urule-core-context.xml]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'urule.bootstrapManager' defined in class path resource [urule-console-context.xml]: Initialization of bean failed; nested exception is com.bstek.urule.exception.RuleException: com.bstek.urule.console.config.exception.ConfigLoadException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Could not create connection to database server.)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bstek.demo.Application.main(Application.java:16)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'urule.bootstrapManager' defined in class path resource [urule-console-context.xml]: Initialization of bean failed; nested exception is com.bstek.urule.exception.RuleException: com.bstek.urule.console.config.exception.ConfigLoadException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Could not create connection to database server.)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:311)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:624)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:612)
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1243)
+	at com.bstek.urule.runtime.DynamicSpringConfigLoaderImpl.setApplicationContext(DynamicSpringConfigLoaderImpl.java:81)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:123)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:100)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 16 common frames omitted
+Caused by: com.bstek.urule.exception.RuleException: com.bstek.urule.console.config.exception.ConfigLoadException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Could not create connection to database server.)
+	at com.bstek.urule.console.config.bootstrap.BootstrapManager.load(BootstrapManager.java:75)
+	at com.bstek.urule.console.config.bootstrap.BootstrapManager.setApplicationContext(BootstrapManager.java:124)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:123)
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:100)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 32 common frames omitted
+Caused by: com.bstek.urule.console.config.exception.ConfigLoadException: java.sql.SQLException: Cannot create PoolableConnectionFactory (Could not create connection to database server.)
+	at com.bstek.urule.console.config.manager.DBConfigManager.load(DBConfigManager.java:37)
+	at com.bstek.urule.console.config.manager.JdbcConfigManager.load(JdbcConfigManager.java:35)
+	at com.bstek.urule.console.config.bootstrap.BootstrapManager.load(BootstrapManager.java:64)
+	... 38 common frames omitted
+Caused by: java.sql.SQLException: Cannot create PoolableConnectionFactory (Could not create connection to database server.)
+	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:669)
+	at org.apache.commons.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:544)
+	at org.apache.commons.dbcp2.BasicDataSource.getConnection(BasicDataSource.java:753)
+	at com.bstek.urule.console.config.manager.JdbcConfigManager.getConnection(JdbcConfigManager.java:66)
+	at com.bstek.urule.console.config.manager.DBConfigManager.e(DBConfigManager.java:106)
+	at com.bstek.urule.console.config.manager.DBConfigManager.load(DBConfigManager.java:35)
+	... 40 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2332)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2085)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:795)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:400)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:327)
+	at org.apache.commons.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:55)
+	at org.apache.commons.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:355)
+	at org.apache.commons.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:115)
+	at org.apache.commons.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:665)
+	... 45 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at com.mysql.jdbc.ConnectionImpl.getServerCharset(ConnectionImpl.java:3005)
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1916)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1845)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1215)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2255)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2286)
+	... 59 common frames omitted
+[2023-05-14 14:46:25.836] [main] INFO  com.bstek.demo.Application : Starting Application on DESKTOP-VO4678M with PID 14080 (D:\MyStudy\urule-pro-boot\target\classes started by Stone in D:\MyStudy\urule-pro-boot)
+[2023-05-14 14:46:25.837] [main] INFO  com.bstek.demo.Application : The following profiles are active: mysql
+[2023-05-14 14:46:26.549] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8081 (http)
+[2023-05-14 14:46:26.554] [main] INFO  o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8081"]
+[2023-05-14 14:46:26.555] [main] INFO  o.a.catalina.core.StandardService : Starting service [Tomcat]
+[2023-05-14 14:46:26.555] [main] INFO  o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37]
+[2023-05-14 14:46:26.656] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+[2023-05-14 14:46:26.656] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 797 ms
+[2023-05-14 14:46:26.833] [main] INFO  c.b.u.c.c.bootstrap.BootstrapManager : [URULE-CONSOLE]检测到Environment配置信息,开始初始化...
+[2023-05-14 14:46:27.176] [main] INFO  c.b.u.c.c.bootstrap.BootstrapManager : [URULE-CONSOLE]初始化完成!
+[2023-05-14 14:46:27.674] [main] INFO  o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+[2023-05-14 14:46:27.876] [main] INFO  o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8081"]
+[2023-05-14 14:46:27.927] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8081 (http) with context path ''
+[2023-05-14 14:46:27.934] [main] INFO  com.bstek.demo.Application : Started Application in 2.423 seconds (JVM running for 3.547)
+[2023-05-14 14:48:11.810] [http-nio-8081-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-05-14 14:48:11.810] [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+[2023-05-14 14:48:11.814] [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet : Completed initialization in 4 ms
+[2023-05-14 14:49:09.951] [http-nio-8081-exec-7] WARN  c.b.u.c.d.s.user.UserServiceManager : BeanID:UserService undefined!
+[2023-05-14 14:49:43.712] [http-nio-8081-exec-5] INFO  com.bstek.urule.console.util.IPUtils : getIpAddress(HttpServletRequest) - X-Forwarded-For - String ip=null
+[2023-05-14 14:49:43.712] [http-nio-8081-exec-5] INFO  com.bstek.urule.console.util.IPUtils : getIpAddress(HttpServletRequest) - Proxy-Client-IP - String ip=null
+[2023-05-14 14:49:43.712] [http-nio-8081-exec-5] INFO  com.bstek.urule.console.util.IPUtils : getIpAddress(HttpServletRequest) - WL-Proxy-Client-IP - String ip=null
+[2023-05-14 14:49:43.712] [http-nio-8081-exec-5] INFO  com.bstek.urule.console.util.IPUtils : getIpAddress(HttpServletRequest) - HTTP_CLIENT_IP - String ip=null
+[2023-05-14 14:49:43.712] [http-nio-8081-exec-5] INFO  com.bstek.urule.console.util.IPUtils : getIpAddress(HttpServletRequest) - HTTP_X_FORWARDED_FOR - String ip=null
+[2023-05-14 14:49:43.712] [http-nio-8081-exec-5] INFO  com.bstek.urule.console.util.IPUtils : getIpAddress(HttpServletRequest) - getRemoteAddr - String ip=0:0:0:0:0:0:0:1
+[2023-05-14 16:34:28.342] [main] INFO  com.bstek.demo.Application : Starting Application on DESKTOP-VO4678M with PID 12000 (D:\MyStudy\urule-pro-boot\target\classes started by Stone in D:\MyStudy\urule-pro-boot)
+[2023-05-14 16:34:28.357] [main] INFO  com.bstek.demo.Application : The following profiles are active: mysql
+[2023-05-14 16:34:29.901] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8081 (http)
+[2023-05-14 16:34:29.917] [main] INFO  o.a.coyote.http11.Http11NioProtocol : Initializing ProtocolHandler ["http-nio-8081"]
+[2023-05-14 16:34:29.917] [main] INFO  o.a.catalina.core.StandardService : Starting service [Tomcat]
+[2023-05-14 16:34:29.917] [main] INFO  o.a.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.37]
+[2023-05-14 16:34:30.026] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+[2023-05-14 16:34:30.026] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1637 ms
+[2023-05-14 16:34:30.214] [main] INFO  c.b.u.c.c.bootstrap.BootstrapManager : [URULE-CONSOLE]检测到Environment配置信息,开始初始化...
+[2023-05-14 16:34:30.714] [main] INFO  c.b.u.c.c.bootstrap.BootstrapManager : [URULE-CONSOLE]初始化完成!
+[2023-05-14 16:34:31.058] [main] INFO  o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService 'applicationTaskExecutor'
+[2023-05-14 16:34:31.183] [main] INFO  o.a.coyote.http11.Http11NioProtocol : Starting ProtocolHandler ["http-nio-8081"]
+[2023-05-14 16:34:31.214] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer : Tomcat started on port(s): 8081 (http) with context path ''
+[2023-05-14 16:34:31.229] [main] INFO  com.bstek.demo.Application : Started Application in 3.592 seconds (JVM running for 7.252)
+[2023-05-14 16:35:46.296] [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2023-05-14 16:35:46.297] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+[2023-05-14 16:35:46.301] [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet : Completed initialization in 4 ms
+[2023-05-14 16:36:14.893] [http-nio-8081-exec-10] WARN  c.b.u.c.d.s.user.UserServiceManager : BeanID:UserService undefined!
+[2023-05-14 16:36:14.907] [http-nio-8081-exec-10] INFO  com.bstek.urule.console.util.IPUtils : getIpAddress(HttpServletRequest) - X-Forwarded-For - String ip=null
+[2023-05-14 16:36:14.907] [http-nio-8081-exec-10] INFO  com.bstek.urule.console.util.IPUtils : getIpAddress(HttpServletRequest) - Proxy-Client-IP - String ip=null
+[2023-05-14 16:36:14.907] [http-nio-8081-exec-10] INFO  com.bstek.urule.console.util.IPUtils : getIpAddress(HttpServletRequest) - WL-Proxy-Client-IP - String ip=null
+[2023-05-14 16:36:14.907] [http-nio-8081-exec-10] INFO  com.bstek.urule.console.util.IPUtils : getIpAddress(HttpServletRequest) - HTTP_CLIENT_IP - String ip=null
+[2023-05-14 16:36:14.907] [http-nio-8081-exec-10] INFO  com.bstek.urule.console.util.IPUtils : getIpAddress(HttpServletRequest) - HTTP_X_FORWARDED_FOR - String ip=null
+[2023-05-14 16:36:14.907] [http-nio-8081-exec-10] INFO  com.bstek.urule.console.util.IPUtils : getIpAddress(HttpServletRequest) - getRemoteAddr - String ip=0:0:0:0:0:0:0:1
+[2023-05-14 17:23:46.863] [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'applicationTaskExecutor'
