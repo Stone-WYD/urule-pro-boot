@@ -3,5 +3,11 @@ server:
 spring:
  profiles:
   active: mysql #激活mysql配置
+ datasource:
+  url: jdbc:mysql://192.168.30.43:3306/gisp_release?characterEncoding=utf8&usSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+  username: root
+  password: njxnet1234
+  driver-class-name: com.mysql.jdbc.Driver
+  type: com.alibaba.druid.pool.DruidDataSource
 logging:
  config: classpath:logback-spring.xml
